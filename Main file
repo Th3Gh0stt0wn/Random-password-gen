@@ -1,0 +1,27 @@
+import random
+limit = input("How long do you want your password to be?")
+password = ''
+password2 = ''
+password3 = ''
+lowerCase = 'abcdefghijklmnopqrstuvwxyz'
+upperCase = 'ABCDEFHIGKLMNOPQRSTUVWXYZ'
+specialCharacter = '1234567890!@#$%^&*(){}[];:.,/?~+=-_'
+
+for i in range(int(limit)):
+    randChar = random.choice(lowerCase)
+    password = password + randChar
+print("Your weak password is: " + password)
+
+print()
+
+for i in range(int(limit)):
+    randChar = random.choice(lowerCase + upperCase)
+    password2 = password2 + randChar
+print("Your moderate password is: " + password2)
+
+print()
+
+for i in range(int(limit)):
+    randChar = random.choice(lowerCase + upperCase + specialCharacter)
+    password3 = password3 + randChar
+print("Your difficult password is: " + password3)
